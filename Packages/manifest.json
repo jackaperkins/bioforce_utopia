@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "com.unity.purchasing": "exclude",
+    "com.unity.postprocessing": "2.1.1"
+  }
+}
