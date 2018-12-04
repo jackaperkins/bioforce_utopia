@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HitscanShoot : MonoBehaviour {
     public GameObject tempMonkey;
+    public GameObject tempTree;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,7 @@ public class HitscanShoot : MonoBehaviour {
      
 
                 // spawn nature
-                GameObject bill = Instantiate(tempMonkey, hit.point + -1 * Camera.main.transform.forward, Quaternion.identity);
+                GameObject bill = Instantiate(Random.value > 0.5f ? tempMonkey:tempTree, hit.point -0.3f * Camera.main.transform.forward, Quaternion.identity);
                 bill.transform.SetParent(hit.collider.transform);
             }
         }

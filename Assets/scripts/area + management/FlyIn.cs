@@ -45,8 +45,8 @@ public class FlyIn : MonoBehaviour, ITriggerable {
             if (Vector3.Distance(transform.position, originPosition) > 5)
             {
                 fallSpeed = -30;
-                transform.Rotate(15 * Random.Range(-1, 1), 0, 0);
-                transform.Rotate(0, 20 * Random.Range(-1, 1), 0);
+                transform.Rotate(Util.Pick(-10, 10), 0, 0);
+                transform.Rotate(0,  Util.Pick(-20, 20), 0);
             }
         }
     }
