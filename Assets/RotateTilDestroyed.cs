@@ -19,7 +19,7 @@ public class RotateTilDestroyed : MonoBehaviour {
 	void Update () {
         transform.Rotate(rotation * Time.deltaTime);
         if(dead){
-            rotation = Vector3.MoveTowards(rotation, Vector3.zero, 40 * Time.deltaTime);
+            rotation = Vector3.MoveTowards(rotation, Vector3.zero, 150 * Time.deltaTime);
         }
 	}
 }

@@ -6,17 +6,22 @@ ModelImporter:
     100000: //RootNode
     100002: spinner_base
     100004: spinner_top
+    100006: spinner_face
     400000: //RootNode
     400002: spinner_base
     400004: spinner_top
+    400006: spinner_face
     2100000: No Name
     2100002: Material
     2300000: spinner_base
     2300002: spinner_top
+    2300004: spinner_face
     3300000: spinner_base
     3300002: spinner_top
+    3300004: spinner_face
     4300000: spinner_top
     4300002: spinner_base
+    4300004: spinner_face
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -69,8 +74,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 20
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1

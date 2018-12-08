@@ -42,12 +42,11 @@ public class FlyIn : MonoBehaviour, ITriggerable {
             dead = true;
 
             // knock us up into the air a little if we're not landed yet
-            if (Vector3.Distance(transform.position, originPosition) > 5)
-            {
+     
                 fallSpeed = -30;
                 transform.Rotate(Util.Pick(-10, 10), 0, 0);
                 transform.Rotate(0,  Util.Pick(-20, 20), 0);
-            }
+
         }
     }
 

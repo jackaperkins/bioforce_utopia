@@ -15,14 +15,14 @@ public class FlashScreen : MonoBehaviour {
         group = GetComponent<CanvasGroup>();
 	}
 
-    public void Flash () {
-        alpha = 1;
+    public void Flash (float amount) {
+        alpha = amount;
         group.alpha = alpha;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        alpha -= Time.deltaTime * 40;
+        alpha -= Time.deltaTime * 30;
         group.alpha = alpha;
 	}
 }
