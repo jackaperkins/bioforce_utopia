@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9161c00f4f684171b9b8d1032d2c412, type: 3}
+  m_Name: monkeys
+  m_EditorClassIdentifier: 
+  maxAmmo: 40
+  repeateRate: 0.05
+  lifeTime: 5
+  announceUI: {fileID: 0}
+  announceSound: {fileID: 0}
+  billboardPrefabs:
+  - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 2}

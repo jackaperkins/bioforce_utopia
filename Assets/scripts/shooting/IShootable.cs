@@ -5,5 +5,5 @@ using UnityEngine;
 interface IShootable {
     void Shoot();
 
-    bool ShouldParent();
+    //bool ShouldParent();
 }

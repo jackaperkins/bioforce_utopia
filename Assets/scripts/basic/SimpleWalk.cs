@@ -6,21 +6,31 @@ public class SimpleWalk : MonoBehaviour {
     Vector3 dir;
     public float speed = 3;
     public float fallSpeed = 3f;
+    public float noiseMagnitude = 20f;
     float maxFallSpeed;
     float currentFallSpeed;
+    public bool flying = false;
 
-	// Use this for initialization
-	void Start () {
-        dir = new Vector3(Random.Range(-1f,1f), 0, Random.Range(-1,1f));
+    // Use this for initialization
+    void Start() {
+        if (flying) { 
+            dir = Camera.main.transform.forward * -1;
+            dir += new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1, 1f)) * noiseMagnitude * 0.3f;
+        } else {
+            dir = new Vector3(Random.Range(-1f,1f), 0, Random.Range(-1,1f));
+        }
         dir.Normalize();
         dir.y = 0;
         maxFallSpeed = fallSpeed * 2f;
-
 	}
+
+
+
+
 	
 	// Update is called once per frame
 	void Update () {
-        dir += new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1, 1f)) * 20f * Time.deltaTime;
+        dir += new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1, 1f)) * noiseMagnitude * Time.deltaTime;
         dir.Normalize();
 
 
@@ -44,6 +54,9 @@ public class SimpleWalk : MonoBehaviour {
             } else {
                 // fall down
                 currentFallSpeed = Mathf.Max(maxFallSpeed * -1, currentFallSpeed - Time.deltaTime * 4);
+                if(flying){
+                    currentFallSpeed = 0;
+                }
                 transform.position = new Vector3(hit.point.x, transform.position.y +speed*Time.deltaTime*currentFallSpeed, hit.point.z);
 
             }

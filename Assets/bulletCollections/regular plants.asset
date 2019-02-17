@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9161c00f4f684171b9b8d1032d2c412, type: 3}
+  m_Name: regular plants
+  m_EditorClassIdentifier: 
+  maxAmmo: 8
+  repeateRate: 0.2
+  lifeTime: -1
+  announceUI: {fileID: 0}
+  announceSound: {fileID: 0}
+  billboardPrefabs:
+  - {fileID: 1724037403759332, guid: 15955ff441b3048eaa5e907a38cfd4ee, type: 2}
+  - {fileID: 1024745656761084, guid: 63861d8e4b4fa415184b7af2a821ad4a, type: 2}
+  - {fileID: 1935387890435014, guid: eca1b108bfa9a443783ff0c6e86cf0e3, type: 2}
+  - {fileID: 1935387890435014, guid: eca1b108bfa9a443783ff0c6e86cf0e3, type: 2}
+  - {fileID: 1024745656761084, guid: 63861d8e4b4fa415184b7af2a821ad4a, type: 2}
+  - {fileID: 1442511741899048, guid: 3479a7c3d8fd84f20bb9406e3910c4f1, type: 2}
+  - {fileID: 1520731212018884, guid: 9e10611494ffe483688e28d4a8a500ae, type: 2}

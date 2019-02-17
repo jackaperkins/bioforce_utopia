@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitFlash : MonoBehaviour {
+public class HitFlash : MonoBehaviour, IShootable {
     Material material;
     float flash = 0;
     Color flashColor;
@@ -19,11 +19,11 @@ public class HitFlash : MonoBehaviour {
         }
 	}
 
-    public void Hit () {
+    public void Shoot () {
         flash = 1;
         float h, s, v;
-        Color.RGBToHSV(material.GetColor("_Color"), out h, out s, out v);
         material.EnableKeyword("_EMISSION");
+        Color.RGBToHSV(material.GetColor("_Color"), out h, out s, out v);
         flashColor = Color.HSVToRGB(h,0.3f,1);
     }
 }

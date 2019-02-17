@@ -6,11 +6,13 @@ public class AnimateSprite : MonoBehaviour {
     public enum SpeedOption {
         i8=8,
         i16= 16,
-        i24 = 24
+        i24 = 24,
+        i40 = 40           
     }
 
     public SpeedOption speed = SpeedOption.i24;
     public bool randomFlip = false;
+    public bool oneShot = false;
 
     public Texture2D[] sprites;
     int spriteIndex = 0;
@@ -18,23 +20,32 @@ public class AnimateSprite : MonoBehaviour {
 
     float timer;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         material = GetComponent<Renderer>().material;
-        spriteIndex = Random.Range(0, sprites.Length);
+        if (!oneShot) {
+            spriteIndex = Random.Range(0, sprites.Length);
+        }
+
         if(randomFlip) {
             if (Random.value > 0.5f)
             {
                 transform.Rotate(0, 0, 180, Space.Self);
             }
         }
-	}
+
+        material.SetTexture("_MainTex", sprites[spriteIndex]);
+    }
+
+    // reflip
 	
 	// Update is called once per frame
 	void Update () {
         timer -= Time.deltaTime;
         if(timer <= 0){
             timer = (1 / (float)(speed));
-            spriteIndex = (spriteIndex + 1) % sprites.Length;
+            if ((oneShot && (spriteIndex < sprites.Length - 1)) || (!oneShot)) {
+                spriteIndex = (spriteIndex + 1) % sprites.Length;
+            }
             material.SetTexture("_MainTex", sprites[spriteIndex]);
         }
 	}

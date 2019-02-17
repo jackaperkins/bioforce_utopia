@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33079025140392678}
   - component: {fileID: 23231220830076218}
   - component: {fileID: 64738212187763532}
-  - component: {fileID: 114059947617650698}
   m_Layer: 0
   m_Name: tree plane
   m_TagString: Untagged
@@ -129,36 +128,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114059947617650698
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1302833670610512}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9cc69f718c54dddbd3eced6ae84026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 24
-  randomFlip: 0
-  sprites:
-  - {fileID: 2800000, guid: 51ffb0509f9e845daa6449b780d0c955, type: 3}
-  - {fileID: 2800000, guid: 0e6427fe965174607b75401f3110d234, type: 3}
-  - {fileID: 2800000, guid: 6e50f3e1c325a4a2eaa9bbb2b7916069, type: 3}
-  - {fileID: 2800000, guid: bb1f119935ebf425c88a40fa8789c64f, type: 3}
-  - {fileID: 2800000, guid: 08313c1a9ab884d66b02f4e5c462d013, type: 3}
-  - {fileID: 2800000, guid: cc68f50fe9f894fcb96bc5fd37f19714, type: 3}
-  - {fileID: 2800000, guid: 433d67631b9c9495088583034093b1be, type: 3}
-  - {fileID: 2800000, guid: 732ec2650701949b78f9a9d174ac2a93, type: 3}
-  - {fileID: 2800000, guid: ca1c10a5c489544a191bfb2f85b34c21, type: 3}
-  - {fileID: 2800000, guid: 4cec98eee2a7749dbb3f9834731e070b, type: 3}
-  - {fileID: 2800000, guid: 9dd1b67fa9e524f86ba734222dc35ebc, type: 3}
-  - {fileID: 2800000, guid: 3e75c4bc4422a45b3bc8e5f43136c2f9, type: 3}
-  - {fileID: 2800000, guid: f4e7734e9a15841f2ba77d20ce5dec68, type: 3}
-  - {fileID: 2800000, guid: 52df0d86207244311b260b7d9f0f7b3d, type: 3}
-  - {fileID: 2800000, guid: 015ba7c0a2fe442a5967c2bba69c78f4, type: 3}
-  - {fileID: 2800000, guid: 05ccc210e149d4dde86c4e01a6168323, type: 3}
 --- !u!114 &114308145732413178
 MonoBehaviour:
   m_ObjectHideFlags: 1

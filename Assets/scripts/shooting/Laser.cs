@@ -53,10 +53,10 @@ public class Laser : MonoBehaviour {
             dieNextFrame = true;
 
             GameObject g = (GameObject) Instantiate(prefab, hit.point, Quaternion.identity);
-            HitFlash flash = hit.collider.gameObject.GetComponent<HitFlash>();
-            if(flash){
-                flash.Hit();
-            }
+            //HitFlash flash = hit.collider.gameObject.GetComponent<HitFlash>();
+            //if(flash){
+            //    //flash.Hit();
+            //}
             if (prefab.tag == "Parent")
             {
                 g.transform.SetParent(hit.collider.transform);

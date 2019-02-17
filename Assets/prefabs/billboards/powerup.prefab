@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1936348220209962}
+  m_IsPrefabParent: 1
+--- !u!1 &1936348220209962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4195414131826558}
+  - component: {fileID: 114370297263814912}
+  - component: {fileID: 65610117544687458}
+  m_Layer: 12
+  m_Name: powerup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1993164079524686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4074158175960908}
+  - component: {fileID: 33741745394392342}
+  - component: {fileID: 23710203797613944}
+  - component: {fileID: 114624784299743288}
+  m_Layer: 12
+  m_Name: power up plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4074158175960908
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993164079524686}
+  m_LocalRotation: {x: -0.00000012943396, y: 0.69122314, z: -0.7226414, w: -0.00000013531714}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4195414131826558}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 92.54599, y: 180, z: -0.000015258789}
+--- !u!4 &4195414131826558
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936348220209962}
+  m_LocalRotation: {x: -0, y: -0.9879112, z: -0, w: 0.15502104}
+  m_LocalPosition: {x: 36.74, y: 44.43, z: 302.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4074158175960908}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -162.164, z: 0}
+--- !u!23 &23710203797613944
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993164079524686}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: eb2f2e909c6694e2d84fe1943c6e7bce, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33741745394392342
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993164079524686}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65610117544687458
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936348220209962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.4, y: 12.28, z: 1}
+  m_Center: {x: 0, y: 2.32, z: 0}
+--- !u!114 &114370297263814912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936348220209962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc9d87789556455ea713f1a6fc8686b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114624784299743288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993164079524686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9cc69f718c54dddbd3eced6ae84026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 24
+  randomFlip: 1
+  oneShot: 0
+  sprites:
+  - {fileID: 2800000, guid: d29d034fa3a4241fcb63d8c49f94a553, type: 3}
+  - {fileID: 2800000, guid: 861cac0aabe69453cbae7d5521146c30, type: 3}
+  - {fileID: 2800000, guid: bd2a2d928759b4d90bd65886be5c87fd, type: 3}
+  - {fileID: 2800000, guid: 1378e76ca1e0645d5934cd7ed3bba290, type: 3}
+  - {fileID: 2800000, guid: 2169c00195ef74933923593e57db4dd4, type: 3}
+  - {fileID: 2800000, guid: 046fa7d90142e4a69a2b91bd5960320f, type: 3}
+  - {fileID: 2800000, guid: 4408f98bf6e0e470a9d179d9be4b83a0, type: 3}
+  - {fileID: 2800000, guid: a93226d24c0784eaebbe4e563caba9ed, type: 3}
+  - {fileID: 2800000, guid: 2552837e70c214ee6b4d4bd342bb8662, type: 3}
+  - {fileID: 2800000, guid: c656342a44b6845df8f3b5ef9828e7be, type: 3}
+  - {fileID: 2800000, guid: 1ad4caff787b142aa990aab2dc0e1d36, type: 3}
+  - {fileID: 2800000, guid: 7e40229de3ed342b8961be89f57c8a48, type: 3}
+  - {fileID: 2800000, guid: c04fb85bf11f84209946f71a85c00af8, type: 3}
+  - {fileID: 2800000, guid: 80909c42408b148399263be427490526, type: 3}
+  - {fileID: 2800000, guid: 7aa0d47dfd40e48ba91c909119eaf76f, type: 3}
+  - {fileID: 2800000, guid: 6af449224f0964a12bef50b8b3113fa7, type: 3}
+  - {fileID: 2800000, guid: 4db3eea5dc3bc4eb389dfe752470697b, type: 3}
+  - {fileID: 2800000, guid: 23493809393494ea48d622b3870f25d9, type: 3}
+  - {fileID: 2800000, guid: abaf68eaca6494a48af1981c4dfb5c8b, type: 3}
+  - {fileID: 2800000, guid: fa4960c00a10740fda2efb9320e2791c, type: 3}
+  - {fileID: 2800000, guid: bdfdaa58aae7649ea90211063c3fb29c, type: 3}
+  - {fileID: 2800000, guid: acc5f9c7a4e48490eab49103808ec529, type: 3}
+  - {fileID: 2800000, guid: e20c12e9ec0f54466b18be13f1997db9, type: 3}
+  - {fileID: 2800000, guid: 2ec90754ae9934a9d8c8709813f58e4d, type: 3}

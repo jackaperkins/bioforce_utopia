@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1724037403759332}
+  m_IsPrefabParent: 1
+--- !u!1 &1261248096811642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4636321968083864}
+  - component: {fileID: 33138570244113820}
+  - component: {fileID: 23203471012231336}
+  - component: {fileID: 114516433967346152}
+  m_Layer: 0
+  m_Name: seagull sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1724037403759332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4702885724178068}
+  - component: {fileID: 114641212782648894}
+  - component: {fileID: 114762537033565840}
+  - component: {fileID: 114898665839914092}
+  m_Layer: 0
+  m_Name: seagull
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4636321968083864
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261248096811642}
+  m_LocalRotation: {x: -0.00000012943396, y: 0.69122314, z: -0.7226414, w: -0.00000013531714}
+  m_LocalPosition: {x: -0, y: 2.82, z: -0.08}
+  m_LocalScale: {x: 0.58241725, y: 0.58241725, z: 0.58241725}
+  m_Children: []
+  m_Father: {fileID: 4702885724178068}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 92.54599, y: 180, z: -0.000015258789}
+--- !u!4 &4702885724178068
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724037403759332}
+  m_LocalRotation: {x: -0, y: -0.9879112, z: -0, w: 0.15502104}
+  m_LocalPosition: {x: 31.19547, y: 28.8, z: 295.77454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4636321968083864}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -162.164, z: 0}
+--- !u!23 &23203471012231336
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261248096811642}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 4ba7ea2216a634f809882d080b34d718, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33138570244113820
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261248096811642}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114516433967346152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261248096811642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9cc69f718c54dddbd3eced6ae84026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 24
+  randomFlip: 1
+  oneShot: 0
+  sprites:
+  - {fileID: 2800000, guid: 8cd7f7ae44d69426d8721b9fd6bfedda, type: 3}
+  - {fileID: 2800000, guid: b10c2cba5dcbf40f8a43449a262cfde0, type: 3}
+  - {fileID: 2800000, guid: a15bd7bf6fc5e4e7a8fa31b9d3d26b7e, type: 3}
+  - {fileID: 2800000, guid: 5f7c3a207bd9b4ba489566289ea811c6, type: 3}
+  - {fileID: 2800000, guid: eb9c473a2b2614f96ab25190b97989a9, type: 3}
+  - {fileID: 2800000, guid: 8295996113a4546da889ca28704ec4f0, type: 3}
+  - {fileID: 2800000, guid: f9a64afc002ff4d91a709c1df084051f, type: 3}
+  - {fileID: 2800000, guid: 4059f1b77d9494fb5a0bab42b9d43f24, type: 3}
+  - {fileID: 2800000, guid: 71618fda6eac44799a9e8c75ff76496a, type: 3}
+  - {fileID: 2800000, guid: 4f09205b30e74430caef30fed4be545c, type: 3}
+  - {fileID: 2800000, guid: 144775d11ef2e4c4bbbe78023cbe4836, type: 3}
+  - {fileID: 2800000, guid: 541b5f09b60f9409a975130132a41f27, type: 3}
+  - {fileID: 2800000, guid: 1f834bcc416524cf5aa113982c69402c, type: 3}
+  - {fileID: 2800000, guid: 41344742786b44688b3e56cd8db3b5cc, type: 3}
+  - {fileID: 2800000, guid: dd4ed9a7665ba4b0691e2ee76aba08ca, type: 3}
+  - {fileID: 2800000, guid: 3c01c121788b34c36a9766966d95c596, type: 3}
+--- !u!114 &114641212782648894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724037403759332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc9d87789556455ea713f1a6fc8686b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114762537033565840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724037403759332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6861ab6bf81448bb8da60274fbdb7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fallSpeed: 3
+  noiseMagnitude: 10
+  flying: 1
+--- !u!114 &114898665839914092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724037403759332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6d3fbb73b6349d9b16af47011d1d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
