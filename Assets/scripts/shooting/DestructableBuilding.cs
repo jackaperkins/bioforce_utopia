@@ -35,7 +35,6 @@ public class DestructableBuilding : MonoBehaviour, IShootable, IDestructable {
                 CameraShake.Shake(0.3f);
                 FlashScreen.instance.Flash(2f); // 3 "frames"
                 destroyed = true;
-                print("was destroyed");
                 gameObject.BroadcastMessage("Destroyed", SendMessageOptions.DontRequireReceiver);
             }
         } else {

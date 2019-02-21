@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9161c00f4f684171b9b8d1032d2c412, type: 3}
-  m_Name: monkeys
+  m_Name: palm trees
   m_EditorClassIdentifier: 
-  maxAmmo: 30
-  repeateRate: 0.04
-  lifeTime: 6
-  announceUI: {fileID: 1928128500477500, guid: 49d29462901a0494d8956f28648f66ad, type: 2}
+  maxAmmo: 4
+  repeateRate: 0.06
+  lifeTime: -1
+  announceUI: {fileID: 0}
   announceSound: {fileID: 0}
   billboardPrefabs:
-  - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 2}
+  - {fileID: 1646675395711720, guid: bdc5e409d230147f6a6f17bce0cb89d2, type: 2}
