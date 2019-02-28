@@ -12,6 +12,8 @@ public class Transition : MonoBehaviour {
     string nextScene;
 	// Use this for initialization
 	void Awake () {
+        // set that framerate
+
         if(instance == null) {
             instance = this;
             DontDestroyOnLoad(gameObject);

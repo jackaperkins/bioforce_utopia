@@ -82,6 +82,7 @@ public class HitscanShoot : MonoBehaviour {
     void FireShot(){
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+        Instantiate(gunShootBurst, Input.mousePosition, Quaternion.identity, UIRoot.root);
         if (Physics.Raycast(ray, out hit, 100, LayerMask.GetMask(new string[] { "Target", "Powerup" }))) {
             GameObject g = hit.collider.gameObject;
             IShootable[] shootables = g.GetComponentsInChildren<IShootable>();
@@ -89,7 +90,7 @@ public class HitscanShoot : MonoBehaviour {
                 shootable.Shoot();
             }
 
-            Instantiate(gunShootBurst, Input.mousePosition, Quaternion.identity, UIRoot.root);
+       
             // spawn nature
 
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Target")) { 

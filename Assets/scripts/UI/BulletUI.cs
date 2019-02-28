@@ -27,6 +27,7 @@ public class BulletUI : MonoBehaviour {
         bulletsReloadingUI.SetActive(shooter.reloading);
 
         if(shooter.currentProfile.maxAmmo != maxAmmo) {
+            maxAmmo = shooter.currentProfile.maxAmmo;
             RespawnUIElements();
         }
 
@@ -41,12 +42,11 @@ public class BulletUI : MonoBehaviour {
 
     void RespawnUIElements () {
         // kill em all
-        int max = Mathf.Min(20, shooter.currentProfile.maxAmmo);
         for(int i = bulletFrame.transform.childCount-1; i >=0; i--) {
             Destroy(bulletFrame.transform.GetChild(i).gameObject);
         }
 
-        for (int i = 0; i < max; i++) {
+        for (int i = 0; i < shooter.currentProfile.maxAmmo; i++) {
             GameObject b = Instantiate(bulletUIPrefab, bulletFrame);
             b.GetComponentInChildren<LoopAnimateSprite>().index = i;
         }
@@ -56,11 +56,9 @@ public class BulletUI : MonoBehaviour {
         RectTransform prefabTransform = bulletUIPrefab.GetComponent<RectTransform>();
         Vector2 scale = prefabTransform.sizeDelta;
 
-        scale.x = (bulletFrame.rect.width / (float)max) - layout.spacing;
+        scale.x = (bulletFrame.rect.width / (float)shooter.currentProfile.maxAmmo) - layout.spacing;
 
-        scale.x = Mathf.Min(scale.x, 80); // min size
-        maxAmmo = max;
-        //prefabTransform.sizeDelta = scale;
+        scale.x = Mathf.Min(scale.x, 80);
 
         foreach (RectTransform rect in bulletFrame.transform) {
             rect.sizeDelta = scale;
