@@ -83,17 +83,21 @@ public class HitscanShoot : MonoBehaviour {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         Instantiate(gunShootBurst, Input.mousePosition, Quaternion.identity, UIRoot.root);
-        if (Physics.Raycast(ray, out hit, 100, LayerMask.GetMask(new string[] { "Target", "Powerup" }))) {
+        print("a fire !!");
+        if (Physics.Raycast(ray, out hit, 200, LayerMask.GetMask(new string[] { "Target", "Powerup" }))) {
             GameObject g = hit.collider.gameObject;
+            print("B Ray hit something");
             IShootable[] shootables = g.GetComponentsInChildren<IShootable>();
             foreach (IShootable shootable in shootables) {
                 shootable.Shoot();
+                print("C ray hit TARGET!!!!!");
             }
 
-       
-            // spawn nature
 
-            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Target")) { 
+            // spawn nature
+  
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Target")) {
+            
                 GameObject toSpawn = currentProfile.billboardPrefabs[(int)(Random.value * currentProfile.billboardPrefabs.Length)];
                 GameObject bill = Instantiate(toSpawn, hit.point - 0.3f * Camera.main.transform.forward, Quaternion.identity);
                 bill.transform.SetParent(hit.collider.transform);

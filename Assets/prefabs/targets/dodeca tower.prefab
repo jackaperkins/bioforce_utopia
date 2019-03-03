@@ -40,6 +40,10 @@ GameObject:
   - component: {fileID: 23055900632644266}
   - component: {fileID: 135488378905668940}
   - component: {fileID: 114272610597815228}
+  - component: {fileID: 114819560776109922}
+  - component: {fileID: 114559946339229004}
+  - component: {fileID: 114570855429035876}
+  - component: {fileID: 114469005220831400}
   m_Layer: 11
   m_Name: Icosphere
   m_TagString: Untagged
@@ -58,8 +62,7 @@ GameObject:
   - component: {fileID: 33778694352554054}
   - component: {fileID: 23376469503152104}
   - component: {fileID: 64124816311101942}
-  - component: {fileID: 114257905833223666}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: ico tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,8 +117,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1984910358599070}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.3, y: 0, z: -1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4297224112494520}
@@ -144,7 +147,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1563431623548364}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -179,7 +182,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1330594380423868}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -276,17 +279,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300010, guid: 17abf4e8a949f41439ce80ae432d8897, type: 3}
---- !u!114 &114257905833223666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1890478966385726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b59b14cbffcb4c26b438c242e21f968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114272610597815228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,6 +290,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b59b14cbffcb4c26b438c242e21f968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114469005220831400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563431623548364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e64396870ae474e9e536b27f994f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardPrefab: {fileID: 1935387890435014, guid: eca1b108bfa9a443783ff0c6e86cf0e3,
+    type: 2}
+  desiredPoints: 25
+--- !u!114 &114559946339229004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563431623548364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ea47f8331f440c98dc0d3c52e7bac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  parent: 0
+  destroyed: 0
+--- !u!114 &114570855429035876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563431623548364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12b053c4d6db4330a70b0ca52378c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 2800000, guid: 8d6eab96e033543b49300224fc4479c0, type: 3}
+--- !u!114 &114819560776109922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563431623548364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c285834f2087e4a19bcaeb98efac7952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 30, z: 0}
 --- !u!135 &135488378905668940
 SphereCollider:
   m_ObjectHideFlags: 1

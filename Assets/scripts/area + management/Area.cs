@@ -26,7 +26,6 @@ public class Area : MonoBehaviour {
         triggered = true;
         actors = GetComponentsInChildren<ITriggerable>();
         destructables = GetComponentsInChildren<IDestructable>();
-        print(destructables.Length);
 
         foreach (ITriggerable actor in actors)
         {
