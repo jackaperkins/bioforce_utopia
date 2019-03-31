@@ -6,7 +6,7 @@ public class GameCamera : MonoBehaviour {
     public static Camera current;
 
     void Awake() {
-        print("FUUUUCK");
+
         current = GetComponent<Camera>();
     }
 

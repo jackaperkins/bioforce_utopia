@@ -15,12 +15,13 @@ public class FallOnDestroy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        goalPosition = goal.position;
-        goalRotation = goal.rotation;
+
 	}
 
     void Destroyed() {
         triggered = true;
+        goalPosition = goal.position;
+        goalRotation = goal.rotation;
     }
 
     // Update is called once per frame
