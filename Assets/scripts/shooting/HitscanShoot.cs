@@ -80,26 +80,30 @@ public class HitscanShoot : MonoBehaviour {
     }
 
     void FireShot(){
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // convert main cam to render cam space;
+        Vector2 pos = Input.mousePosition;
+        pos.x /= Screen.width;
+        pos.y /= Screen.height;
+        pos.x *= GameCamera.current.targetTexture.width;
+        pos.y *= GameCamera.current.targetTexture.height;
+
+        Ray ray = GameCamera.current.ScreenPointToRay(pos);
         RaycastHit hit;
+        Debug.DrawLine(ray.origin, ray.origin + 50 * ray.direction, Color.red, 1f);
         Instantiate(gunShootBurst, Input.mousePosition, Quaternion.identity, UIRoot.root);
-        print("a fire !!");
+
         if (Physics.Raycast(ray, out hit, 200, LayerMask.GetMask(new string[] { "Target", "Powerup" }))) {
             GameObject g = hit.collider.gameObject;
-            print("B Ray hit something");
+       
             IShootable[] shootables = g.GetComponentsInChildren<IShootable>();
             foreach (IShootable shootable in shootables) {
                 shootable.Shoot();
-                print("C ray hit TARGET!!!!!");
+
             }
-
-
-            // spawn nature
   
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Target")) {
-            
                 GameObject toSpawn = currentProfile.billboardPrefabs[(int)(Random.value * currentProfile.billboardPrefabs.Length)];
-                GameObject bill = Instantiate(toSpawn, hit.point - 0.3f * Camera.main.transform.forward, Quaternion.identity);
+                GameObject bill = Instantiate(toSpawn, hit.point - 0.3f * GameCamera.current.transform.forward, Quaternion.identity);
                 bill.transform.SetParent(hit.collider.transform);
             } else {
                 PowerUp power = hit.collider.gameObject.GetComponent<PowerUp>();
