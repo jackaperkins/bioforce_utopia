@@ -30,7 +30,11 @@ public class HitscanShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(currentProfile != defaultProfile) {
+        if (!AStageDirector.instance.inAction) {
+            currentBullets = currentProfile.maxAmmo;
+        }
+
+        if (currentProfile != defaultProfile) {
             if(profileTimer > 0) {
                 profileTimer -= Time.deltaTime;
             } else {

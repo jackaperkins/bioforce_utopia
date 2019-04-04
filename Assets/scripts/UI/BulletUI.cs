@@ -26,7 +26,7 @@ public class BulletUI : MonoBehaviour {
 	void Update () {
         bulletsReloadingUI.SetActive(shooter.reloading);
 
-        if(shooter.currentProfile.maxAmmo != maxAmmo) {
+        if (shooter.currentProfile.maxAmmo != maxAmmo) {
             maxAmmo = shooter.currentProfile.maxAmmo;
             RespawnUIElements();
         }

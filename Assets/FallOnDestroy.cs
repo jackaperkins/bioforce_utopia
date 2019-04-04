@@ -30,7 +30,7 @@ public class FallOnDestroy : MonoBehaviour {
             speed += acceleration * Time.deltaTime;
             speed = Mathf.Min(speed, topSpeed);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, speed * 10 * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, speed * 7 * Time.deltaTime);
 
             transform.position = Vector3.MoveTowards(transform.position, goalPosition, speed * Time.deltaTime);
         }

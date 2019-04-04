@@ -40,15 +40,30 @@ public class AStageDirector : MonoBehaviour {
 
     public void BeginArea (string areaName) {
         director.Pause();
-        foreach(Transform t in areaRoot) {
+        Area area = GetAreaByName(areaName);
+        if (area) {
+            currentArea = area;
+            currentArea.Trigger();
+            inAction = true;
+        }
+    }
+
+    public void BeginAreaAndContinue (string areaName) {
+        Area area = GetAreaByName(areaName);
+        if (area) {
+            currentArea = area;
+            currentArea.Trigger();
+            inAction = true;
+        }
+    }
+
+    Area GetAreaByName (string areaName) {
+        foreach (Transform t in areaRoot) {
             if (t.name.ToLower() == areaName) {
-                currentArea = t.gameObject.GetComponent<Area>();
-                currentArea.Trigger();
-                inAction = true;
-                return;
+                return  t.gameObject.GetComponent<Area>();
             }
         }
-        print("couldn't find area " + areaName);
+        throw new System.Exception("couldn't find area " + areaName);
     }
 
     IEnumerator DelayedFinishArea () {
@@ -64,6 +79,4 @@ public class AStageDirector : MonoBehaviour {
             inAction = false;
         }
 	}
-
-
 }
