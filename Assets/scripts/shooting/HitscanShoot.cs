@@ -103,7 +103,7 @@ public class HitscanShoot : MonoBehaviour {
   
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Target")) {
                 GameObject toSpawn = currentProfile.billboardPrefabs[(int)(Random.value * currentProfile.billboardPrefabs.Length)];
-                GameObject bill = Instantiate(toSpawn, hit.point - 0.3f * GameCamera.current.transform.forward, Quaternion.identity);
+                GameObject bill = Instantiate(toSpawn, hit.point - 0.3f * Camera.main.transform.forward, Quaternion.identity);
                 bill.transform.SetParent(hit.collider.transform);
             } else {
                 PowerUp power = hit.collider.gameObject.GetComponent<PowerUp>();
