@@ -86,12 +86,8 @@ public class HitscanShoot : MonoBehaviour {
     void FireShot(){
         // convert main cam to render cam space;
         Vector2 pos = Input.mousePosition;
-        pos.x /= Screen.width;
-        pos.y /= Screen.height;
-        pos.x *= GameCamera.current.targetTexture.width;
-        pos.y *= GameCamera.current.targetTexture.height;
 
-        Ray ray = GameCamera.current.ScreenPointToRay(pos);
+        Ray ray = Camera.main.ScreenPointToRay(pos);
         RaycastHit hit;
         Debug.DrawLine(ray.origin, ray.origin + 50 * ray.direction, Color.red, 1f);
         Instantiate(gunShootBurst, Input.mousePosition, Quaternion.identity, UIRoot.root);
