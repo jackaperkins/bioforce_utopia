@@ -33,16 +33,30 @@ public class BulletUI : MonoBehaviour {
         }
 
         if (currentShots != shooter.currentBullets) {
-            if (currentShots > shooter.currentBullets)
-            {
-                GameObject shell = (GameObject)Instantiate(bulletShellPrefab, UIRoot.rootRect);
-                RectTransform r = shell.GetComponent<RectTransform>();
-                r.anchoredPosition = new Vector2(900, 75);
+            bool spawnShell = false;
+            if (currentShots > shooter.currentBullets){
+                spawnShell = true;
             }
+
             currentShots = shooter.currentBullets;
             // count backwards (last child first as they're right alligned
+            // and find first one we are switching off
+            Transform lastOffBullet = null;
             for (int i = bulletFrame.childCount -1; i >= 0; i--) {
                 bulletFrame.GetChild(i).GetComponentInChildren<Image>().enabled = ((bulletFrame.childCount - i -1) < currentShots);
+                if(!((bulletFrame.childCount - i - 1) < currentShots) && lastOffBullet == null){
+                    lastOffBullet = bulletFrame.GetChild(i);
+                    print(i);
+                }
+            }
+
+            if (spawnShell)
+            {
+                GameObject shell = (GameObject)Instantiate(bulletShellPrefab, lastOffBullet);
+                RectTransform r = shell.GetComponent<RectTransform>();
+                r.anchoredPosition = new Vector2(0, 0);
+                shell.transform.SetParent(UIRoot.rootRect);
+                r.anchoredPosition += new Vector2(0, 70);
             }
         }
     }

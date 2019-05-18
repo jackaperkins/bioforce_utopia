@@ -84,12 +84,12 @@ public class HitscanShoot : MonoBehaviour {
     }
 
     void SpawnShootFlash(){
-        print(Input.mousePosition.x + " / " + Screen.width);
+
         Vector2 uiPos = new Vector2(Input.mousePosition.x / ((float)Screen.width), Input.mousePosition.y / ((float)Screen.height));
       
         uiPos *= UIRoot.rootRect.rect.size;
 
-        print(uiPos.x + " " + uiPos.y);
+
 
         // do we need to convert input mouseposition to screenspace... yes?
         GameObject shootEffect = (GameObject)Instantiate(gunShootBurst, UIRoot.root);

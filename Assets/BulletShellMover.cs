@@ -11,8 +11,8 @@ public class BulletShellMover : MonoBehaviour
     void Start()
     {
         rect = GetComponent<RectTransform>();
-        ySpeed = Random.Range(2850, 3000);
-        xSpeed = Random.Range(-650, -1000);
+        ySpeed = Random.Range(2450, 3000);
+        xSpeed = Random.Range(-650, -1200);
         
     }
 
