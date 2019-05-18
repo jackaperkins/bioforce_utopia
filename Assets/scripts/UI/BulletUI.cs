@@ -7,6 +7,7 @@ public class BulletUI : MonoBehaviour {
     HitscanShoot shooter;
 
     public GameObject bulletUIPrefab;
+    public GameObject bulletShellPrefab;
     public RectTransform bulletFrame;
     public GameObject bulletsReloadingUI;
 
@@ -32,6 +33,12 @@ public class BulletUI : MonoBehaviour {
         }
 
         if (currentShots != shooter.currentBullets) {
+            if (currentShots > shooter.currentBullets)
+            {
+                GameObject shell = (GameObject)Instantiate(bulletShellPrefab, UIRoot.rootRect);
+                RectTransform r = shell.GetComponent<RectTransform>();
+                r.anchoredPosition = new Vector2(900, 75);
+            }
             currentShots = shooter.currentBullets;
             // count backwards (last child first as they're right alligned
             for (int i = bulletFrame.childCount -1; i >= 0; i--) {
