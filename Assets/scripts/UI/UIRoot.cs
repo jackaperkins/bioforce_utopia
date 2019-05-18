@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIRoot : MonoBehaviour {
 	public static Transform root;
+    public static RectTransform rootRect;
     static UIRoot instance;
 
     public GameObject actionPrefab;
@@ -12,6 +14,7 @@ public class UIRoot : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         root = this.transform;
+        rootRect = GetComponent<RectTransform>();
         instance = this;
 	}
 	
