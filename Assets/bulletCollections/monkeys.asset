@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14,7 +15,8 @@ MonoBehaviour:
   maxAmmo: 30
   repeateRate: 0.04
   lifeTime: 6
-  announceUI: {fileID: 1928128500477500, guid: 49d29462901a0494d8956f28648f66ad, type: 2}
+  announceUI: {fileID: 4079122846645825013, guid: 172691f6e7b044ca28921976cf5324e4,
+    type: 3}
   announceSound: {fileID: 0}
   billboardPrefabs:
-  - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 2}
+  - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 3}

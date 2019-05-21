@@ -8,6 +8,7 @@ public class UISlidein : MonoBehaviour {
     RectTransform rect;
     Vector2 origin;
     Vector2 outPosition;
+    public bool fromLeft = false;
 
     bool inOut;
 
@@ -16,10 +17,10 @@ public class UISlidein : MonoBehaviour {
         origin = rect.anchoredPosition;
 
         Vector2 newPos = rect.anchoredPosition;
-        newPos.x += 1000;
+        newPos.x += fromLeft ? -1000 :1000;
 
         outPosition = origin;
-        outPosition.x -= 1000;
+        outPosition.x -= fromLeft ? -1000 : 1000;
         rect.anchoredPosition = newPos;
 	}
 

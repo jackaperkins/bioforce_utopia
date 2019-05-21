@@ -16,11 +16,18 @@ public class AStageDirector : MonoBehaviour {
 
     public Transform areaRoot;
 
+    public bool debugStartFromOffset;
+    public float debugOffsetTime;
+
     private void Awake()
     {
         inAction = false;
         instance = this;
         director = GetComponent<PlayableDirector>();
+        if (debugStartFromOffset)
+        {
+            director.time = debugOffsetTime;
+        }
     }
 
 	// Use this for initialization

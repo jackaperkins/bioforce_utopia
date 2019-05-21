@@ -7,11 +7,17 @@ public class HitFlash : MonoBehaviour, IShootable {
     float flash = 0;
     Color originColor;
     Color flashColor;
+    bool isDead;
 
 	// Use this for initialization
 	void Start () {
         material = GetComponent<Renderer>().material;
 	}
+
+    public void Destroyed()
+    {
+        isDead = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,6 +35,9 @@ public class HitFlash : MonoBehaviour, IShootable {
 	}
 
     public void Shoot () {
+        if(isDead){
+            return;
+        }
         flash = 1;  
         float h, s, v;
         material.EnableKeyword("_EMISSION");
