@@ -27,9 +27,11 @@ public class BulletUI : MonoBehaviour {
 	void Update () {
         bulletsReloadingUI.SetActive(shooter.reloading);
 
+        bool respawnedElements = false;
         if (shooter.currentProfile.maxAmmo != maxAmmo) {
             maxAmmo = shooter.currentProfile.maxAmmo;
             RespawnUIElements();
+            respawnedElements = true;
         }
 
         if (currentShots != shooter.currentBullets) {
@@ -50,7 +52,7 @@ public class BulletUI : MonoBehaviour {
                 }
             }
 
-            if (spawnShell)
+            if (spawnShell && !respawnedElements)
             {
                 GameObject shell = (GameObject)Instantiate(bulletShellPrefab, lastOffBullet);
                 RectTransform r = shell.GetComponent<RectTransform>();
