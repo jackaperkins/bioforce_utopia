@@ -9,6 +9,7 @@ public class UISlidein : MonoBehaviour {
     Vector2 origin;
     Vector2 outPosition;
     public bool fromLeft = false;
+    public bool slideOutSameDirection = false;
 
     bool inOut;
 
@@ -20,7 +21,12 @@ public class UISlidein : MonoBehaviour {
         newPos.x += fromLeft ? -1000 :1000;
 
         outPosition = origin;
-        outPosition.x -= fromLeft ? -1000 : 1000;
+        float offset = fromLeft ? -1000 : 1000;
+        if(slideOutSameDirection) {
+            offset *= -1;
+        }
+        outPosition.x -= offset;
+
         rect.anchoredPosition = newPos;
 	}
 

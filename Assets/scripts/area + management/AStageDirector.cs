@@ -13,6 +13,7 @@ public class AStageDirector : MonoBehaviour {
 
 
     public bool inAction = false;
+    public GameObject powerupPrefab;
 
     public Transform areaRoot;
 
@@ -52,6 +53,13 @@ public class AStageDirector : MonoBehaviour {
             currentArea = area;
             currentArea.Trigger();
             inAction = true;
+        }
+    }
+
+    public void SpawnUIPrefab (string name) {
+        if (name == "powerup")
+        {
+            Instantiate(powerupPrefab, UIRoot.root);
         }
     }
 

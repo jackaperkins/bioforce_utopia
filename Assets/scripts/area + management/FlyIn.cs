@@ -80,13 +80,14 @@ public class FlyIn : MonoBehaviour, ITriggerable {
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.blue;
+        Gizmos.color = new Color(0.3f, 0.3f, 1f);
 
         if(warpEndTransform) {
             Gizmos.DrawLine(transform.position, warpEndTransform.position);  
 
             if(warpStartTransform){
                 Gizmos.DrawLine(warpStartTransform.position, warpEndTransform.position);
+                Gizmos.DrawWireSphere(warpStartTransform.position, 1);
             }
         }
 

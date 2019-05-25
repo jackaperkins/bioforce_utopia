@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9161c00f4f684171b9b8d1032d2c412, type: 3}
   m_Name: monkeys
   m_EditorClassIdentifier: 
-  maxAmmo: 30
+  maxAmmo: 50
   repeateRate: 0.04
   lifeTime: 6
   announceUI: {fileID: 4079122846645825013, guid: 172691f6e7b044ca28921976cf5324e4,

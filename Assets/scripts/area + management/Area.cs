@@ -11,6 +11,7 @@ public class Area : MonoBehaviour {
 
     bool triggered;
     bool done;
+    public bool showResult = true;
     public float length = 8;
 	// Use this for initialization
 	void Start () {
@@ -58,7 +59,7 @@ public class Area : MonoBehaviour {
                 if (allDone){
                     done = true;
                     AStageDirector.FinishAreaGlobal();
-                    UIRoot.ShowGreat(); // finisbed early
+                    if(showResult) UIRoot.ShowGreat(); // finisbed early
                 }
 
             }
@@ -67,7 +68,7 @@ public class Area : MonoBehaviour {
             {
                 done = true;
                 AStageDirector.FinishAreaGlobal(); // it was late
-                UIRoot.ShowTimesUp();
+                if(showResult) UIRoot.ShowTimesUp();
             }
         }
 	}
