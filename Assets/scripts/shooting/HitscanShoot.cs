@@ -15,6 +15,8 @@ public class HitscanShoot : MonoBehaviour {
 
     public bool reloading;
 
+    public RectTransform crosshair;
+
     //int maxBullets = 6;
     public int currentBullets = 6;
 
@@ -30,8 +32,23 @@ public class HitscanShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Cursor.visible = false;
         if (!AStageDirector.instance.inAction) {
             currentBullets = currentProfile.maxAmmo;
+
+            if(crosshair.gameObject.activeInHierarchy){
+                crosshair.gameObject.SetActive(false);
+              
+            }
+           
+        } else {
+            
+            if (!crosshair.gameObject.activeInHierarchy){
+                crosshair.gameObject.SetActive(true);
+               
+            }
+            crosshair.anchoredPosition = GetScreenToUIPosition();
+
         }
 
         if (currentProfile != defaultProfile) {
@@ -71,6 +88,8 @@ public class HitscanShoot : MonoBehaviour {
 
 	}
 
+    
+
     void LoadNewProfile (SOBulletProfile profile){
         currentProfile = profile;
         currentBullets = currentProfile.maxAmmo;
@@ -83,12 +102,16 @@ public class HitscanShoot : MonoBehaviour {
         }
     }
 
+    Vector2 GetScreenToUIPosition () {
+        Vector2 uiPos = new Vector2(Input.mousePosition.x / ((float)Screen.width), Input.mousePosition.y / ((float)Screen.height));
+
+        uiPos *= UIRoot.rootRect.rect.size;
+        return uiPos;
+    }
+
     void SpawnShootFlash(){
 
-        Vector2 uiPos = new Vector2(Input.mousePosition.x / ((float)Screen.width), Input.mousePosition.y / ((float)Screen.height));
-      
-        uiPos *= UIRoot.rootRect.rect.size;
-
+        Vector2 uiPos = GetScreenToUIPosition();
 
 
         // do we need to convert input mouseposition to screenspace... yes?

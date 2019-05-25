@@ -48,7 +48,7 @@ public class BulletUI : MonoBehaviour {
                 bulletFrame.GetChild(i).GetComponentInChildren<Image>().enabled = ((bulletFrame.childCount - i -1) < currentShots);
                 if(!((bulletFrame.childCount - i - 1) < currentShots) && lastOffBullet == null){
                     lastOffBullet = bulletFrame.GetChild(i);
-                    print(i);
+                  
                 }
             }
 

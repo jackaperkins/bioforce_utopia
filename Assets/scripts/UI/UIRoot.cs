@@ -11,11 +11,17 @@ public class UIRoot : MonoBehaviour {
     public GameObject actionPrefab;
     public GameObject timesUpPrefab;
     public GameObject greatPrefab;
+
+    public AudioClip actionSound;
+
+    public GameObject actionUIElement;
+
 	// Use this for initialization
 	void Awake () {
         root = this.transform;
         rootRect = GetComponent<RectTransform>();
         instance = this;
+        HideAction();
 	}
 	
 	// Update is called once per frame
@@ -24,8 +30,15 @@ public class UIRoot : MonoBehaviour {
 	}
 
     public static void ShowAction() {
-        Instantiate(instance.actionPrefab, root);
+        AudioManager.PlaySound(instance.actionSound);
+        instance.Invoke("HideAction", 1f);
+        instance.actionUIElement.SetActive(true);
     }
+
+    void HideAction(){
+        actionUIElement.SetActive(false);
+    }
+
     public static void ShowTimesUp()
     {
         Instantiate(instance.timesUpPrefab, root);
