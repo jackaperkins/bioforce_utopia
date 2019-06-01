@@ -15,6 +15,7 @@ public class UIRoot : MonoBehaviour {
     public AudioClip actionSound;
 
     public GameObject actionUIElement;
+    public GameObject waitUIElement;
 
 	// Use this for initialization
 	void Awake () {
@@ -22,6 +23,7 @@ public class UIRoot : MonoBehaviour {
         rootRect = GetComponent<RectTransform>();
         instance = this;
         HideAction();
+        HideWait();
 	}
 	
 	// Update is called once per frame
@@ -35,9 +37,25 @@ public class UIRoot : MonoBehaviour {
         instance.actionUIElement.SetActive(true);
     }
 
-    void HideAction(){
+
+    void HideAction()
+    {
         actionUIElement.SetActive(false);
     }
+
+    //----
+
+    public static void ShowWait ()
+    {
+        instance.waitUIElement.SetActive(true);        
+    }
+
+    public static void HideWait ()
+    {
+        instance.waitUIElement.SetActive(false);
+    }
+
+    //---
 
     public static void ShowTimesUp()
     {

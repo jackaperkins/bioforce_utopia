@@ -50,6 +50,7 @@ public class AStageDirector : MonoBehaviour {
         director.Pause();
         Area area = GetAreaByName(areaName);
         if (area) {
+            UIRoot.HideWait();
             currentArea = area;
             currentArea.Trigger();
             inAction = true;
@@ -84,6 +85,10 @@ public class AStageDirector : MonoBehaviour {
     IEnumerator DelayedFinishArea () {
         yield return new WaitForSeconds(0.7f);
         director.Play();
+        if(currentArea.showWaitAfter){
+            UIRoot.ShowWait();
+        }
+       
     }
 	
 	// Update is called once per frame

@@ -21,6 +21,8 @@ public class BulletUI : MonoBehaviour {
 
         RespawnUIElements();
 
+        
+
     }
 	
 	// Update is called once per frame
@@ -41,14 +43,16 @@ public class BulletUI : MonoBehaviour {
             }
 
             currentShots = shooter.currentBullets;
+
             // count backwards (last child first as they're right alligned
             // and find first one we are switching off
+
             Transform lastOffBullet = null;
-            for (int i = bulletFrame.childCount -1; i >= 0; i--) {
-                bulletFrame.GetChild(i).GetComponentInChildren<Image>().enabled = ((bulletFrame.childCount - i -1) < currentShots);
-                if(!((bulletFrame.childCount - i - 1) < currentShots) && lastOffBullet == null){
+            for (int i = 0; i < bulletFrame.childCount; i++) {
+                bulletFrame.GetChild(i).GetComponentInChildren<Image>().enabled = (i < currentShots);
+       
+                if(!(i < currentShots) && lastOffBullet == null){
                     lastOffBullet = bulletFrame.GetChild(i);
-                  
                 }
             }
 
@@ -81,7 +85,7 @@ public class BulletUI : MonoBehaviour {
 
         scale.x = (bulletFrame.rect.width / (float)shooter.currentProfile.maxAmmo) - layout.spacing;
 
-        scale.x = Mathf.Min(scale.x, 80);
+        scale.x = Mathf.Min(Mathf.Max(scale.x, 30), 80);
 
         foreach (RectTransform rect in bulletFrame.transform) {
             rect.sizeDelta = scale;

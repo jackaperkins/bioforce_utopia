@@ -12,7 +12,7 @@ public class BulletShellMover : MonoBehaviour
     {
         rect = GetComponent<RectTransform>();
         ySpeed = Random.Range(2450, 3000);
-        xSpeed = Random.Range(-650, -1200);
+        xSpeed = Random.Range(650, 1200);
         
     }
 

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 925643198206549079}
   - component: {fileID: 1975794849}
   - component: {fileID: 1539701938816088039}
+  - component: {fileID: 152226759843635065}
   m_Layer: 11
   m_Name: inverse_pyramid
   m_TagString: Untagged
@@ -92,7 +93,7 @@ MeshCollider:
   m_GameObject: {fileID: 300554307519193632}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -166,6 +167,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toRotate: {x: 0, y: 15, z: 0}
   randomSign: 1
+--- !u!65 &152226759843635065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300554307519193632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22205588, y: 0.20733087, z: 0.22205582}
+  m_Center: {x: 0.00000003730107, y: 0.1034764, z: 0.0000004358051}
 --- !u!1 &4138266609032203787
 GameObject:
   m_ObjectHideFlags: 0

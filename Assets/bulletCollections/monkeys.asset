@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: monkeys
   m_EditorClassIdentifier: 
   maxAmmo: 50
-  repeateRate: 0.04
-  lifeTime: 6
+  repeateRate: 0.01
+  lifeTime: 8
   announceUI: {fileID: 4079122846645825013, guid: 172691f6e7b044ca28921976cf5324e4,
     type: 3}
   announceSound: {fileID: 0}
   billboardPrefabs:
   - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 3}
+  - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 3}
+  - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 3}
+  - {fileID: 1819224894392798, guid: 03b226c266b844746989d29fbae91c14, type: 3}
+  - {fileID: 1646675395711720, guid: bdc5e409d230147f6a6f17bce0cb89d2, type: 3}
+  - {fileID: 1024745656761084, guid: 63861d8e4b4fa415184b7af2a821ad4a, type: 3}

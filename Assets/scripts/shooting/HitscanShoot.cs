@@ -12,6 +12,8 @@ public class HitscanShoot : MonoBehaviour {
 
     public AudioClip shoot;
     public AudioClip reload;
+    public AudioClip richocet1;
+    public AudioClip richocet2;
 
     public bool reloading;
 
@@ -72,7 +74,7 @@ public class HitscanShoot : MonoBehaviour {
                     AudioManager.PlaySound(reload); // click
                 } else {
                     currentBullets--;
-                    AudioManager.PlaySound(shoot);
+                   
                     //shoot her
 
                     bulletCooldown = 0;
@@ -151,6 +153,14 @@ public class HitscanShoot : MonoBehaviour {
                 LoadNewProfile(power.bulletProfile);
                 Destroy(hit.collider.gameObject);
            }
+            AudioManager.PlaySound(shoot);
+        } else {
+            AudioManager.PlaySound(shoot);
+            if(Random.value > 0.5f) {
+                AudioManager.PlaySound(richocet1);
+            } else {
+                AudioManager.PlaySound(richocet2);
+            }
         }
     }
 

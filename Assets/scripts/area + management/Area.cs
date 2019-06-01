@@ -12,6 +12,7 @@ public class Area : MonoBehaviour {
     bool triggered;
     bool done;
     public bool showResult = true;
+    public bool showWaitAfter = true;
     public float length = 8;
 	// Use this for initialization
 	void Start () {
