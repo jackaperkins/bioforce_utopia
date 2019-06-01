@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6d3fbb73b6349d9b16af47011d1d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.1
+  timer: 0.15
 --- !u!114 &114610091374421786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,3 +104,4 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 3528fd8a7e34546ec847b62cf1898da4, type: 3}
   - {fileID: 21300000, guid: fddd1af5b993448a0aa5f5133e4d0c32, type: 3}
+  randomSize: 1
