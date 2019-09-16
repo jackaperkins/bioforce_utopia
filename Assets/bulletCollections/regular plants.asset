@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,15 +13,17 @@ MonoBehaviour:
   m_Name: regular plants
   m_EditorClassIdentifier: 
   maxAmmo: 8
-  repeateRate: 0.2
+  repeateRate: 0.5
   lifeTime: -1
   announceUI: {fileID: 0}
   announceSound: {fileID: 0}
   billboardPrefabs:
-  - {fileID: 1724037403759332, guid: 15955ff441b3048eaa5e907a38cfd4ee, type: 2}
-  - {fileID: 1024745656761084, guid: 63861d8e4b4fa415184b7af2a821ad4a, type: 2}
-  - {fileID: 1935387890435014, guid: eca1b108bfa9a443783ff0c6e86cf0e3, type: 2}
-  - {fileID: 1935387890435014, guid: eca1b108bfa9a443783ff0c6e86cf0e3, type: 2}
-  - {fileID: 1024745656761084, guid: 63861d8e4b4fa415184b7af2a821ad4a, type: 2}
-  - {fileID: 1442511741899048, guid: 3479a7c3d8fd84f20bb9406e3910c4f1, type: 2}
-  - {fileID: 1520731212018884, guid: 9e10611494ffe483688e28d4a8a500ae, type: 2}
+  - {fileID: 1724037403759332, guid: 15955ff441b3048eaa5e907a38cfd4ee, type: 3}
+  - {fileID: 1024745656761084, guid: 63861d8e4b4fa415184b7af2a821ad4a, type: 3}
+  - {fileID: 1935387890435014, guid: eca1b108bfa9a443783ff0c6e86cf0e3, type: 3}
+  - {fileID: 1935387890435014, guid: eca1b108bfa9a443783ff0c6e86cf0e3, type: 3}
+  - {fileID: 1024745656761084, guid: 63861d8e4b4fa415184b7af2a821ad4a, type: 3}
+  - {fileID: 1442511741899048, guid: 3479a7c3d8fd84f20bb9406e3910c4f1, type: 3}
+  - {fileID: 1520731212018884, guid: 9e10611494ffe483688e28d4a8a500ae, type: 3}
+  - {fileID: 1520731212018884, guid: 9e10611494ffe483688e28d4a8a500ae, type: 3}
+  - {fileID: 1347682065979342, guid: fe80e60e7ac23452fa13a6c42dbbea46, type: 3}

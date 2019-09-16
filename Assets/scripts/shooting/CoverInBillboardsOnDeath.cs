@@ -31,6 +31,8 @@ public class CoverInBillboardsOnDeath : MonoBehaviour {
         StartCoroutine(Spawn());
     }
 
+
+
     // spawn the billboards on the selected points over a few frames for cool effect
     IEnumerator Spawn () {
         yield return new WaitForSeconds(0.026f);

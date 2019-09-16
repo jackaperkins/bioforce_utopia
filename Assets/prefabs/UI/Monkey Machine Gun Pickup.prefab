@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3830800204374193270}
   - component: {fileID: 1599691461330302227}
   - component: {fileID: 7990504906911999054}
-  - component: {fileID: 1714408867224247247}
+  - component: {fileID: 7746182342996680698}
   m_Layer: 5
   m_Name: monkey right (1)
   m_TagString: Untagged
@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 1948029087636953878}
   m_LocalRotation: {x: -0, y: -0, z: -0.2682388, w: 0.9633525}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: -1.3446, y: 1.3446, z: 1.3446}
   m_Children: []
   m_Father: {fileID: 4079122846645825012}
   m_RootOrder: 2
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1714408867224247247
+--- !u!114 &7746182342996680698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,11 +84,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948029087636953878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c1907f9c887c47e8b30d92adb065a46, type: 3}
+  m_Script: {fileID: 11500000, guid: 30acdbaf8fc60492ca7a2f28829ac192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 3
-  fromLeft: 1
+  speed: 8
+  holdTime: 1.2
 --- !u!1 &4079122846324951823
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 4079122846324951822}
   - component: {fileID: 4079122846324951816}
   - component: {fileID: 4079122846324951817}
-  - component: {fileID: 7132431023782452318}
+  - component: {fileID: 8243627737649511014}
   m_Layer: 5
   m_Name: monkey right
   m_TagString: Untagged
@@ -117,7 +117,7 @@ RectTransform:
   m_GameObject: {fileID: 4079122846324951823}
   m_LocalRotation: {x: 0, y: 0, z: 0.37136775, w: 0.9284859}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3446, y: 1.3446, z: 1.3446}
   m_Children: []
   m_Father: {fileID: 4079122846645825012}
   m_RootOrder: 1
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &7132431023782452318
+--- !u!114 &8243627737649511014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,11 +173,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4079122846324951823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c1907f9c887c47e8b30d92adb065a46, type: 3}
+  m_Script: {fileID: 11500000, guid: 30acdbaf8fc60492ca7a2f28829ac192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 3
-  fromLeft: 0
+  speed: 8
+  holdTime: 1.2
 --- !u!1 &4079122846645825013
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 4111361926799737787}
   - component: {fileID: 4111223665173488391}
   - component: {fileID: 4111478271913237005}
+  - component: {fileID: 5358147340554808026}
   m_Layer: 5
   m_Name: MONKEYS
   m_TagString: Untagged
@@ -294,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 185}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4291689441348018759
@@ -327,11 +328,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 121
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 121
+    m_MaxSize: 154
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -371,3 +372,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.30181408, b: 1, a: 1}
   m_EffectDistance: {x: -10, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!114 &5358147340554808026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4079466327365408377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30acdbaf8fc60492ca7a2f28829ac192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  holdTime: 1.2

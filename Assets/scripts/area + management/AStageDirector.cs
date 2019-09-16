@@ -14,6 +14,7 @@ public class AStageDirector : MonoBehaviour {
 
     public bool inAction = false;
     public GameObject powerupPrefab;
+    public GameObject drillingPrefab;
 
     public Transform areaRoot;
 
@@ -61,6 +62,9 @@ public class AStageDirector : MonoBehaviour {
         if (name == "powerup")
         {
             Instantiate(powerupPrefab, UIRoot.root);
+        } else if (name == "drilling")
+        {
+            Instantiate(drillingPrefab, UIRoot.root);
         }
     }
 
@@ -97,6 +101,10 @@ public class AStageDirector : MonoBehaviour {
             currentArea.EndEarly();
             director.Play();
             inAction = false;
+        }
+
+        if(Input.GetKeyDown(KeyCode.T)) {
+            ScreenCapture.CaptureScreenshot("screeshot_" +Random.value + "_.png", 2);
         }
 	}
 }

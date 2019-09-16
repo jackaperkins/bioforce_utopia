@@ -24,7 +24,7 @@ public class HitFlash : MonoBehaviour, IShootable {
         if (flash > 0){
 
             // decrement clamp
-            flash -= Time.deltaTime * 4;
+            flash -= Time.deltaTime * 6;
             flash = Mathf.Clamp01(flash);
   
             material.SetColor("_EmissionColor", Color.Lerp(flashColor, originColor, (float)(1 - flash)));

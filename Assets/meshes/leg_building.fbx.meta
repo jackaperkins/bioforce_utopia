@@ -1,69 +1,191 @@
 fileFormatVersion: 2
 guid: 427a665a9223a4732ab6c7a3463e7573
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Cylinder
-    100006: Cylinder.001
-    100008: Cylinder.002
-    100010: Cylinder.003
-    100012: grid_building
-    100014: leg1
-    100016: leg2
-    100018: leg3
-    100020: leg4
-    100022: grid_building_buttom
-    400000: //RootNode
-    400002: Cube
-    400004: Cylinder
-    400006: Cylinder.001
-    400008: Cylinder.002
-    400010: Cylinder.003
-    400012: grid_building
-    400014: leg1
-    400016: leg2
-    400018: leg3
-    400020: leg4
-    400022: grid_building_buttom
-    2100000: Material
-    2300000: //RootNode
-    2300002: Cube
-    2300004: Cylinder
-    2300006: Cylinder.001
-    2300008: Cylinder.002
-    2300010: Cylinder.003
-    2300012: grid_building
-    2300014: leg1
-    2300016: leg2
-    2300018: leg3
-    2300020: leg4
-    2300022: grid_building_buttom
-    3300000: //RootNode
-    3300002: Cube
-    3300004: Cylinder
-    3300006: Cylinder.001
-    3300008: Cylinder.002
-    3300010: Cylinder.003
-    3300012: grid_building
-    3300014: leg1
-    3300016: leg2
-    3300018: leg3
-    3300020: leg4
-    3300022: grid_building_buttom
-    4300000: Cube
-    4300002: Cylinder.003
-    4300004: Cylinder.002
-    4300006: Cylinder.001
-    4300008: Cylinder
-    4300010: leg4
-    4300012: leg3
-    4300014: leg2
-    4300016: leg1
-    4300018: grid_building
-    4300020: grid_building_buttom
-    2186277476908879412: ImportLogs
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Cube
+  - first:
+      1: 100004
+    second: Cylinder
+  - first:
+      1: 100006
+    second: Cylinder.001
+  - first:
+      1: 100008
+    second: Cylinder.002
+  - first:
+      1: 100010
+    second: Cylinder.003
+  - first:
+      1: 100012
+    second: grid_building
+  - first:
+      1: 100014
+    second: leg1
+  - first:
+      1: 100016
+    second: leg2
+  - first:
+      1: 100018
+    second: leg3
+  - first:
+      1: 100020
+    second: leg4
+  - first:
+      1: 100022
+    second: grid_building_buttom
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Cube
+  - first:
+      4: 400004
+    second: Cylinder
+  - first:
+      4: 400006
+    second: Cylinder.001
+  - first:
+      4: 400008
+    second: Cylinder.002
+  - first:
+      4: 400010
+    second: Cylinder.003
+  - first:
+      4: 400012
+    second: grid_building
+  - first:
+      4: 400014
+    second: leg1
+  - first:
+      4: 400016
+    second: leg2
+  - first:
+      4: 400018
+    second: leg3
+  - first:
+      4: 400020
+    second: leg4
+  - first:
+      4: 400022
+    second: grid_building_buttom
+  - first:
+      21: 2100000
+    second: Material
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: Cube
+  - first:
+      23: 2300004
+    second: Cylinder
+  - first:
+      23: 2300006
+    second: Cylinder.001
+  - first:
+      23: 2300008
+    second: Cylinder.002
+  - first:
+      23: 2300010
+    second: Cylinder.003
+  - first:
+      23: 2300012
+    second: grid_building
+  - first:
+      23: 2300014
+    second: leg1
+  - first:
+      23: 2300016
+    second: leg2
+  - first:
+      23: 2300018
+    second: leg3
+  - first:
+      23: 2300020
+    second: leg4
+  - first:
+      23: 2300022
+    second: grid_building_buttom
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: Cube
+  - first:
+      33: 3300004
+    second: Cylinder
+  - first:
+      33: 3300006
+    second: Cylinder.001
+  - first:
+      33: 3300008
+    second: Cylinder.002
+  - first:
+      33: 3300010
+    second: Cylinder.003
+  - first:
+      33: 3300012
+    second: grid_building
+  - first:
+      33: 3300014
+    second: leg1
+  - first:
+      33: 3300016
+    second: leg2
+  - first:
+      33: 3300018
+    second: leg3
+  - first:
+      33: 3300020
+    second: leg4
+  - first:
+      33: 3300022
+    second: grid_building_buttom
+  - first:
+      43: 4300000
+    second: Cube
+  - first:
+      43: 4300002
+    second: Cylinder.003
+  - first:
+      43: 4300004
+    second: Cylinder.002
+  - first:
+      43: 4300006
+    second: Cylinder.001
+  - first:
+      43: 4300008
+    second: Cylinder
+  - first:
+      43: 4300010
+    second: leg4
+  - first:
+      43: 4300012
+    second: leg3
+  - first:
+      43: 4300014
+    second: leg2
+  - first:
+      43: 4300016
+    second: leg1
+  - first:
+      43: 4300018
+    second: grid_building
+  - first:
+      43: 4300020
+    second: grid_building_buttom
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -98,6 +220,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -105,10 +228,13 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -119,11 +245,15 @@ ModelImporter:
     normalSmoothAngle: 25
     normalImportMode: 0
     tangentImportMode: 0
-    normalCalculationMode: 4
+    normalCalculationMode: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -133,8 +263,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
