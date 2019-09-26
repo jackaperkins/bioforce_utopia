@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
 
+
     public static void PlaySound(AudioClip clip) {
         GameObject g = new GameObject();
         AudioSource audio = g.AddComponent<AudioSource>();

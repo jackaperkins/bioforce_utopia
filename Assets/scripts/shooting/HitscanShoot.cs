@@ -9,6 +9,8 @@ public class HitscanShoot : MonoBehaviour {
 
     float profileTimer;
 
+    Vector2 originPosition;
+    RectTransform thisTransform;
 
     public AudioClip shoot;
     public AudioClip reload;
@@ -29,12 +31,26 @@ public class HitscanShoot : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         LoadNewProfile(defaultProfile);
-	}
+        thisTransform = GetComponent<RectTransform>();
+        originPosition = thisTransform.anchoredPosition;
+        thisTransform.anchoredPosition = originPosition + Vector2.down * 300;
 
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+
+    // Update is called once per frame
+    void Update () {
         Cursor.visible = false;
+        if (!AStageDirector.instance.inAction)
+        {
+            //hide
+            thisTransform.anchoredPosition = Vector2.MoveTowards(thisTransform.anchoredPosition, originPosition + Vector2.down * 300, 900*Time.deltaTime);
+        }
+        else
+        {
+            thisTransform.anchoredPosition = Vector2.MoveTowards(thisTransform.anchoredPosition, originPosition, 1200 * Time.deltaTime);
+        }
+
         if (!AStageDirector.instance.inAction) {
             currentBullets = currentProfile.maxAmmo;
 
@@ -71,7 +87,10 @@ public class HitscanShoot : MonoBehaviour {
                 bulletCooldown += Time.deltaTime;
             } else {
                 if (currentBullets <= 0) {
-                    AudioManager.PlaySound(reload); // click
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        AudioManager.PlaySound(reload); // click
+                    }
                 } else {
                     currentBullets--;
                    

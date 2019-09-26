@@ -7,6 +7,23 @@ using UnityEngine.UI;
 
 public class UtopiaUtilities
 {
+    // version 1.2
+
+    // corrected quit, moved enum toUtopiaLauncher
+    
+    public enum GameTitle
+    {
+        fedya,
+        merle,
+        troy,
+        gabriel,
+        neu,
+        chloe,
+        jessica,
+        matias,
+        jack //itsa me
+    };
+
     public static DirectoryInfo GetDataPath()
     {   
 
@@ -16,16 +33,20 @@ public class UtopiaUtilities
 
         Debug.Log("standalone OSX path getting:");
         DirectoryInfo info = Directory.GetParent(dataPath); // now in the main .app folder
+        info = info.Parent; // now we should be in /jack
         info = info.Parent;
 
 #if UNITY_EDITOR
         Debug.Log("editor osx path getting:");
-        info = info.Parent; // now in the directory of game file, e.g. neu
-    #endif
+        //info = info.Parent; // now in the directory of game file, e.g. neu
+#endif
 
 #else
-        // windows
-        // this is on troys computer
+                // windows
+        string dataPath = Application.dataPath; /// in the projects data folder
+
+        DirectoryInfo info = Directory.GetParent(dataPath); // now we're in the folder with the exe and not the data
+        info = info.Parent; // data parent directory!
 #endif
         return info;
     }
@@ -75,7 +96,7 @@ public class UtopiaUtilities
     }
 
 
-    public static bool HasGameBeenPlayed(UtopiaLauncher.GameTitle theGame)
+    public static bool HasGameBeenPlayed(GameTitle theGame)
     {
         DirectoryInfo dataPath = GetDataPath();
         FileInfo[] files = dataPath.GetFiles("save.txt");
@@ -99,7 +120,7 @@ public class UtopiaUtilities
     }
 
     // append a line to the log, creating it if it doesnt exist yet
-    public static void WriteSaveFile(UtopiaLauncher.GameTitle game)
+    public static void WriteSaveFile(GameTitle game)
     {
         DirectoryInfo dataPath = GetDataPath();
         string logFile = Path.Combine(dataPath.FullName, "save.txt");

@@ -8,11 +8,14 @@ public class Transition : MonoBehaviour {
     public static Transition instance;
     public CanvasGroup fader;
 
+    public static string hopScene; 
+
     bool transitioning;
     string nextScene;
 	// Use this for initialization
 	void Awake () {
         // set that framerate
+        Screen.fullScreen = true; // force it
 
         if(instance == null) {
             instance = this;

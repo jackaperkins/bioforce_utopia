@@ -20,7 +20,7 @@ public class EndGameToHub : MonoBehaviour
             if(timer < 0)
             {
 
-                UtopiaLauncher.instance.LaunchProject(UtopiaLauncher.GameTitle.matias);
+                UtopiaLauncher.LaunchProject(UtopiaUtilities.GameTitle.matias);
             }
         }
     }

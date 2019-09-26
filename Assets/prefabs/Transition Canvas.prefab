@@ -368,7 +368,7 @@ MonoBehaviour:
     type: 3}
   greatPrefab: {fileID: 1181953473061650, guid: 195b4bd7270f642e48673038906f4497,
     type: 3}
-  actionSound: {fileID: 8300000, guid: e59a6a4bcbead4bf8b036210c7ba16d0, type: 3}
+  actionSound: {fileID: 8300000, guid: b09427d075b784b7585bafec99b4149b, type: 3}
   actionUIElement: {fileID: 3341269274215348985}
   waitUIElement: {fileID: 6298023312341778237}
 --- !u!1 &1440363514112862

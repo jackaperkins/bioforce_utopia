@@ -6,21 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_scenes/openingmovie.unity
+    guid: edc7c64de9e8d4430ba3ed8288db9ddb
+  - enabled: 1
     path: Assets/_scenes/level 1.unity
     guid: 4f20c312de0434fd3be875a0208b8ab8
   - enabled: 1
-    path: Assets/_scenes/level 2.unity
-    guid: fc973c8bb0a574057ae69799ce2b2323
-  - enabled: 1
-    path: Assets/_scenes/debug menu.unity
-    guid: 2d0a4ee1e0ea2490dacf106ed079ef94
-  - enabled: 1
-    path: Assets/_scenes/boardroom.unity
-    guid: bd9cc830dac2148f4a75391e3f12ffaf
-  - enabled: 1
-    path: Assets/_scenes/loading.unity
-    guid: 3f51359650f9c41a68c476dde16416d1
-  - enabled: 1
     path: Assets/_scenes/end.unity
     guid: 56b65e4cad9eb49d1a2df37f154065f5
+  - enabled: 1
+    path: Assets/_scenes/fakeload.unity
+    guid: 34fd49daef7024463ae3d469a88b27b3
   m_configObjects: {}
