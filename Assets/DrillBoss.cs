@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrillBoss : MonoBehaviour, ITriggerable
+public class DrillBoss : MonoBehaviour, ITriggerable,IDestructable
 {
     bool triggered;
     public Vector3 edgeTriggerPosition;
     public Vector3 maximumPosition;
+    public Transform parentRotator;
+    Vector3 parentOriginRotation;
 
     float moveSpeed = 3;
 
@@ -15,15 +17,24 @@ public class DrillBoss : MonoBehaviour, ITriggerable
 
     public int health = 10;
 
+    SimpleRotate rotator;
+
 
     bool introOver;
     bool upDown = true;
+
+    public bool IsDestroyed ()
+    {
+        return dead;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
 
-      
+        rotator = GetComponent<SimpleRotate>();
+
+        parentOriginRotation = parentRotator.localEulerAngles;
     }
 
     public void GetShot ()
@@ -89,6 +100,14 @@ public class DrillBoss : MonoBehaviour, ITriggerable
             {
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, goalPosition, Time.deltaTime * moveSpeed);
             }
+            else
+            {
+                rotator.rotation *= 0.95f;
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, edgeTriggerPosition, Time.deltaTime * 5);
+
+                parentRotator.localEulerAngles = Vector3.MoveTowards(parentRotator.localEulerAngles, parentOriginRotation + new Vector3(-10, 0, 0), Time.deltaTime*3);
+            }
+
         }
     }
 }
