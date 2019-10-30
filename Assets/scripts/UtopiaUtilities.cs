@@ -142,4 +142,13 @@ public class UtopiaUtilities
 
         File.Delete(files[0].FullName);
     }
+
+    public static void WriteRelayFile()
+    {
+        DirectoryInfo dataPath = GetDataPath();
+        string relayFileLocation = Path.Combine(dataPath.FullName, "relay.txt");
+        Debug.Log("about to write relay file at " + relayFileLocation);
+
+        File.AppendAllText(relayFileLocation, "relay!");
+    }
 }
