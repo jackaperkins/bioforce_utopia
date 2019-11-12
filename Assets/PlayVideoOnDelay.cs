@@ -15,7 +15,7 @@ public class PlayVideoOnDelay : MonoBehaviour
 
     public IntroBlock[] blocks;
     public Text subtitles;
-    public Text nextCursor;
+    public GameObject nextCursor;
 
     bool blinkCursor;
     float cursorTimer;
@@ -27,7 +27,7 @@ public class PlayVideoOnDelay : MonoBehaviour
     {
         StartCoroutine(PlayIt());
         subtitles.text = "";
-        nextCursor.enabled = false;
+        nextCursor.SetActive(false);
     }
 
     IEnumerator PlayIt()
@@ -65,8 +65,9 @@ public class PlayVideoOnDelay : MonoBehaviour
             }
 
             // yield
+            yield return new WaitForSeconds(0.5f);
             blinkCursor = true;
-            nextCursor.enabled = false;
+            nextCursor.SetActive(true);
             cursorTimer = 1f;
             while (true)
             {
@@ -77,7 +78,7 @@ public class PlayVideoOnDelay : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
             blinkCursor = false;
-            nextCursor.enabled = false;
+            nextCursor.SetActive(false);
 
         }
 
@@ -98,12 +99,12 @@ public class PlayVideoOnDelay : MonoBehaviour
     {
         if(blinkCursor)
         {
-            cursorTimer -= Time.deltaTime;
-            if(cursorTimer < 0)
-            {
-                cursorTimer = 0.5f;
-                nextCursor.enabled = !nextCursor.enabled;
-            }
+            //cursorTimer -= Time.deltaTime;
+            //if(cursorTimer < 0)
+            //{
+            //    cursorTimer = 0.5f;
+            //    nextCursor.SetActive(!nextCursor.activeInHierarchy);
+            //}
         }
     }
 }

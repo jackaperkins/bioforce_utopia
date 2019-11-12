@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_scenes/level 1.unity
     guid: 4f20c312de0434fd3be875a0208b8ab8
   - enabled: 1
-    path: Assets/_scenes/openingmovie.unity
+    path: Assets/_scenes/directions.unity
     guid: edc7c64de9e8d4430ba3ed8288db9ddb
   - enabled: 1
     path: Assets/_scenes/fakeload.unity
