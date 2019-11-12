@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class UtopiaLauncher : MonoBehaviour
@@ -13,6 +14,7 @@ public class UtopiaLauncher : MonoBehaviour
 
     public static UtopiaLauncher instance;
 
+    public AudioMixer mixer;
 
     public static bool didLaunch = false;
 
@@ -24,7 +26,7 @@ public class UtopiaLauncher : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        Screen.fullScreen = true;
         // fisrt time waking up, copy ourselves to the global static varaible instance
         instance = this;
     }
@@ -40,75 +42,23 @@ public class UtopiaLauncher : MonoBehaviour
         if (didLaunch)
         {
             Debug.LogError("Already tried to launch a game... did this get triggered more than once????");
-
+            return;
         }
 
-        UtopiaUtilities.WriteSaveFile(title);
-
-        string projectName = title.ToString();
-        Debug.Log("launch new game: " + title);
-
-        DirectoryInfo info = UtopiaUtilities.GetDataPath();
-
-        // look for a folder in data called the same as projectName
-        DirectoryInfo[] folders = info.GetDirectories(projectName);
-        if(folders.Length == 0)
-        {
-            throw new System.Exception("there's no directory called " + projectName + " in " + info.FullName);
-        }
-
-
-        string executablePath = "";
-#if PLATFORM_STANDALONE_OSX
-
-        DirectoryInfo[] dirs = folders[0].GetDirectories("*.app");
-        // on mac so find a directory called wahtever.app!
-        if (dirs.Length == 0)
-        {
-            throw new System.Exception("There's no file matching *.app in " + folders[0].FullName);
-        }
-        else
-        {
-            executablePath = dirs[0].FullName;
-        }
-#else
-        FileInfo[] files = folders[0].GetFiles();
-        foreach (FileInfo file in files)
-        {
-            if (file.FullName.Contains(".exe") && !file.FullName.Contains("Unity"))
-            {
-                executablePath = file.FullName;
-                break;
-            }
-        }
-
-        if (executablePath.Length == 0)
-        {
-            throw new System.Exception("Couldn't find the exe in " + folders[0].FullName);
-        }
-
-#endif
-
-
+        didLaunch = true;
 
         // EXIT FULLSCREEN, START LAUNCHING
         Screen.fullScreen = false;
-        StartCoroutine(ActuallyLaunch(executablePath));
+        StartCoroutine(ActuallyLaunch());
     }
 
-    IEnumerator ActuallyLaunch(string fullPath)
+    IEnumerator ActuallyLaunch()
     {
-        if(fullPath.Length == 0)
-        {
-            throw new System.Exception("No executable provided to launch?");
-        }
-
         yield return new WaitForEndOfFrame();
 
-        System.Diagnostics.Process proc = new System.Diagnostics.Process();
-        proc.StartInfo.FileName = fullPath;
-        Debug.Log("starting new game process");
-        proc.Start();
+        mixer.FindSnapshot("fadeout").TransitionTo(0.5f);
+
+        yield return new WaitForSeconds(0.5f);
 
         yield return new WaitForEndOfFrame();
         Debug.Log("quitting current game");
