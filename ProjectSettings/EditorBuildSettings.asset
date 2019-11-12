@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_scenes/level 1.unity
-    guid: 4f20c312de0434fd3be875a0208b8ab8
+    path: Assets/_scenes/openingmovie.unity
+    guid: 8ae36d22d621940a9ade04098c86e86e
   - enabled: 1
     path: Assets/_scenes/directions.unity
     guid: edc7c64de9e8d4430ba3ed8288db9ddb
   - enabled: 1
     path: Assets/_scenes/fakeload.unity
     guid: 34fd49daef7024463ae3d469a88b27b3
+  - enabled: 1
+    path: Assets/_scenes/level 1.unity
+    guid: 4f20c312de0434fd3be875a0208b8ab8
   - enabled: 1
     path: Assets/_scenes/end.unity
     guid: 56b65e4cad9eb49d1a2df37f154065f5
