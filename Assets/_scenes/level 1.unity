@@ -8102,7 +8102,9 @@ MonoBehaviour:
   edgeTriggerPosition: {x: 0, y: 0, z: 0}
   maximumPosition: {x: 0, y: 129.5, z: 0}
   parentRotator: {fileID: 542283138}
-  health: 10
+  blockadeUIPrefab: {fileID: 5010455543015066548, guid: 3727a49af8ccd4116aa68fc74d2aa078,
+    type: 3}
+  health: 50
 --- !u!114 &697247634
 MonoBehaviour:
   m_ObjectHideFlags: 0

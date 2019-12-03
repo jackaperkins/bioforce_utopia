@@ -9,6 +9,7 @@ public class DrillBoss : MonoBehaviour, ITriggerable,IDestructable
     public Vector3 maximumPosition;
     public Transform parentRotator;
     Vector3 parentOriginRotation;
+    public GameObject blockadeUIPrefab;
 
     float moveSpeed = 3;
 
@@ -47,13 +48,17 @@ public class DrillBoss : MonoBehaviour, ITriggerable,IDestructable
         health -= 1;
         if (health < 1)
         {
-            Invoke("EndGame", 3);
+            StartCoroutine("EndGame");
             dead = true;
         }
     }
 
-    void EndGame ()
+    IEnumerator EndGame ()
     {
+        yield return new WaitForSeconds(1f);
+
+        Instantiate(blockadeUIPrefab, UIRoot.root);
+        yield return new WaitForSeconds(4f);
         Transition.instance.ChangeScene("end");
     }
 
