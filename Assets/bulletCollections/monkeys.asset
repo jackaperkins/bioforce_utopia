@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: monkeys
   m_EditorClassIdentifier: 
   maxAmmo: 50
-  repeateRate: 0.01
+  repeateRate: 0.023
   lifeTime: 8
   announceUI: {fileID: 4079122846645825013, guid: 172691f6e7b044ca28921976cf5324e4,
     type: 3}
